@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a0a0a">
+<meta name="description" content="Join NeoFolks. Open to students who want to learn, experiment and create.">
+<title>Join NeoFolks</title>
+<script>document.documentElement.classList.add('js')</script>
+<link rel="icon" href="assets/logo/neofolks-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="join">
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="NeoFolks home"><span class="brand-mark"><img src="assets/logo/neofolks-logo.png" alt=""></span><span class="brand-word">NeoFolks</span></a>
+  <nav class="main-nav" id="siteNav" aria-label="Main"><a href="index.html" data-nav="home">Home</a><a href="about.html" data-nav="about">About</a><a href="team.html" data-nav="team">Team</a><a href="events.html" data-nav="events">Events</a><a href="contact.html" data-nav="contact">Contact</a><a class="nav-join" href="join.html">Join NeoFolks</a></nav>
+</header>
+<main>
+<section class="j-wrap">
+  <div class="j-side">
+    <h1>Ready to <em class="pu">build?</em></h1>
+    <p>NeoFolks is open to students who want to learn, experiment and create.</p>
+    <ul class="j-words" aria-label="Why join"><li>Learn</li><li>Build</li><li>Collaborate</li><li>Grow</li></ul>
+  </div>
+  <div>
+    <form class="j-form" id="joinForm" novalidate>
+      <p class="j-role" id="roleNote" hidden>Applying for Event Operations Lead</p>
+      <p class="j-sentence">
+        Hi, I&rsquo;m <input class="j-in j-w-name" name="name" required placeholder="your name" aria-label="Name" autocomplete="name">.
+        You can reach me at <input class="j-in j-w-email" name="email" type="email" required placeholder="you@email.com" aria-label="Email" autocomplete="email">.
+        I study <input class="j-in j-w-course" name="course" required placeholder="course / branch" aria-label="Course or branch">
+        in <select class="j-in j-w-year" name="year" required aria-label="Year"><option value="" disabled selected>year</option><option>1st year</option><option>2nd year</option><option>3rd year</option><option>4th year</option><option>Other</option></select>,
+        and I&rsquo;m most curious about
+        <select class="j-in j-w-int" name="interest" required aria-label="What are you interested in?"><option value="" disabled selected>pick one</option><option>Web Development</option><option>AI / ML</option><option>Data Science</option><option>UI / UX</option><option>Cybersecurity</option><option>Cloud</option><option>DevOps</option><option>Blockchain</option><option>Other</option></select>.
+      </p>
+      <div class="j-actions"><button class="btn" type="submit">Join NeoFolks</button></div>
+    </form>
+    <div class="j-done" id="joinDone" tabindex="-1" hidden>
+      <h2>Almost there, <span data-name></span>.</h2>
+      <p>Your email app should open with your details filled in. Send it to finish joining.</p>
+      <div class="j-actions"><a class="btn" data-mail href="mailto:neofolks@nuvstudents.edu">Open email again</a><button class="link" type="button" data-back>Edit my details</button></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="foot-top">
+    <p>Technology community at Navrachana University, Vadodara.</p>
+    <div class="foot-links"><a href="https://www.instagram.com/neofolks/" target="_blank" rel="noreferrer">Instagram</a><a href="https://www.linkedin.com/company/neofolks-nuv" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/neofolks-nuv" target="_blank" rel="noreferrer">GitHub</a></div>
+  </div>
+  <div class="foot-word" aria-hidden="true"><span data-fit>Neo<em class="pu">Folks</em></span></div>
+  <p class="foot-copy">&copy; 2026 NeoFolks</p>
+</footer>
+<script src="js/data.js"></script>
+<script src="js/orbit.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
