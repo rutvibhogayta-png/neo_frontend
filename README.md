@@ -3,10 +3,10 @@
 A multi-page static site. No icons, no emojis, no backend.
 
 ## Pages
-- `index.html` home: fitted headline poster, text-only Saturn orbit, next-event ticket with live countdown, stats
+- `index.html` home: next-event strip, fitted headline poster, text-only Saturn orbit, next-event ticket with live countdown, stats, reviews wall with an add-review form
 - `about.html` drafting-grid page: values accordion, "no single lane" moving lanes, stacked mission bands
 - `team.html` staggered roster of cut panels (initials until photos are supplied)
-- `events.html` upcoming slab plus archive ledger, filterable (also via `events.html?filter=workshops`)
+- `events.html` event lineup: a winding timeline with one event in focus as you scroll (upcoming first, then past), filterable (also via `events.html?filter=workshops`)
 - `contact.html` pinned headline, big contact rows, copy-email button
 - `join.html` the form written as a sentence
 
@@ -18,6 +18,7 @@ Open `index.html`, or from this folder: `python -m http.server 5500`, then visit
 - `technologies`: the orbit, in order
 - `stats`: the three numbers on Home (also edit the matching markup in `index.html` if you change them)
 - `team`: add `photo: "assets/team/name.jpg"` to a member to show a portrait instead of initials
+- `reviews`: `name`, `year`, `course`, `text`. Shown on the Home reviews wall; add as many as you like (10 or more reads best).
 - `events`: `iso` date, `cat` (workshops, seminars, competitions, community), `title`, `detail`.
   Upcoming vs past, the Home ticket and the countdown are worked out from today's date.
 
@@ -35,3 +36,9 @@ Open `index.html`, or from this folder: `python -m http.server 5500`, then visit
 
 ## Scroll features (js/main.js, `NF.scroll`)
 Purple progress bar, back-to-top button, reveal-on-scroll, word-by-word scrub on the intro paragraphs, hero logo parallax, and the orbit nudges as you scroll (js/orbit.js). All switch off under prefers-reduced-motion.
+
+## Reviews (js/main.js, `NF.reviews`)
+The wall loops slowly and pauses on hover; it is a static list under prefers-reduced-motion. The "Add your review" form has no backend yet: a new review is saved in the visitor's browser (localStorage) and appears on their wall only. To collect reviews for everyone, POST the review object at the marked line in the submit handler and load approved reviews into `reviews` in `js/data.js`. Review text is always inserted as plain text, never HTML.
+
+## Events timeline (js/main.js, `NF.timeline`)
+The curve is an SVG drawn from the position of each card's node, so it adapts to any number of events and to mobile (straight line down the left edge). The card nearest the middle of the screen is in focus; click a blurred card to bring it to the middle.

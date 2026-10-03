@@ -21,6 +21,13 @@
 <section class="hero">
   <img class="hero-logo" src="assets/logo/neofolks-logo.png" alt="" aria-hidden="true">
   <p class="hero-side">Navrachana University, Vadodara</p>
+  <a class="hero-next" id="heroNext" href="events.html" hidden>
+    <span class="hn-kicker" data-hn="kicker">Next up</span>
+    <span class="hn-title" data-hn="title"></span>
+    <span class="hn-date" data-hn="date"></span>
+    <span class="hn-count" data-hn="count"></span>
+    <span class="hn-all">All events</span>
+  </a>
   <h1 class="hero-title">
     <span class="hl" style="--i:0;--w:56%"><span data-fit>Learn in <em class="pu">public.</em></span></span>
     <span class="hl hl-outline" style="--i:1;--w:100%"><span data-fit>Build together.</span></span>
@@ -74,6 +81,31 @@
   <div class="stat"><b data-stat="240" data-suffix="+">240+</b><span>Members</span></div>
   <div class="stat"><b data-stat="32">32</b><span>Events</span></div>
   <div class="stat"><b data-stat="21">21</b><span>Workshops</span></div>
+</section>
+
+<section class="reviews sec" id="reviews">
+  <div class="rw-head">
+    <h2 class="h-display">Heard from<br>the <em class="pu">folks.</em></h2>
+    <div class="rw-head-side">
+      <p>Students who came for a workshop and stayed to build.</p>
+      <button type="button" class="btn" id="rwToggle" aria-expanded="false" aria-controls="rwFormWrap">Add your review</button>
+    </div>
+  </div>
+  <div class="rw-form-wrap" id="rwFormWrap" hidden>
+    <form class="rw-form" id="rwForm" autocomplete="off">
+      <div class="rw-field"><label for="rwName">Your name</label><input class="rw-in" id="rwName" name="name" type="text" maxlength="40" required placeholder="Aarav Desai"></div>
+      <div class="rw-field"><label for="rwCourse">Course / branch</label><input class="rw-in" id="rwCourse" name="course" type="text" maxlength="40" required placeholder="Computer Science"></div>
+      <div class="rw-field"><label for="rwYear">Year</label>
+        <select class="rw-in" id="rwYear" name="year" required><option value="" disabled selected>Select year</option><option>First-year</option><option>Second-year</option><option>Third-year</option><option>Final-year</option><option>Alumni</option></select></div>
+      <div class="rw-field rw-wide"><label for="rwText">Your review</label><textarea class="rw-in" id="rwText" name="text" rows="3" minlength="20" maxlength="220" required placeholder="What did NeoFolks change for you?"></textarea><span class="rw-count" id="rwCount" aria-live="polite">0 / 220</span></div>
+      <div class="rw-actions rw-wide"><button type="submit" class="btn">Post review</button><button type="button" class="link" id="rwCancel">Cancel</button></div>
+    </form>
+    <div class="rw-done" id="rwDone" tabindex="-1" hidden>
+      <h3>Thanks, <span data-name></span>.</h3><p>Your review is on the wall below.</p>
+      <button type="button" class="link" id="rwAgain">Write another</button>
+    </div>
+  </div>
+  <div class="rw-wall" id="rwWall" role="region" aria-label="Member reviews"></div>
 </section>
 
 <section class="cta">
